@@ -15,17 +15,33 @@ body{
 }
 
 .navbar-nav .nav-link{
-  color: blue;
+  color: black;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  transition: 0.5s;
+position: relative;
 
+
+}
+.navbar-nav .nav-link::before{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transition: 0.4s;
+  transform: scaleX(0);
+  background: #4070f4;
+}
+
+.navbar-nav .nav-link:hover::before{
+ transform: scaleX(1.2);
 
 }
 
 .navbar-nav .nav-link:hover{
-  color: black;
+ color:blue ;
 }
 
 .navbar-nav .nav-item{
@@ -42,6 +58,6 @@ body{
 }
 
 .service-item:hover{
-  transform: translateY(-50px);
-  transition: 1s;
+  transform: translateY(-30px);
+  transition: 0.5s;
 }
